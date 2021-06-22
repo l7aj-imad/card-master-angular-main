@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h2 style="margin-left: 450px; padding: 10px">
+      Sélectionnez un design de carte de visite
+    </h2>
+
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let theme of themes" class="col-md-4">
+          {{ theme.img }}
+          <div class="card card-block" [routerLink]="['/add-card']">
+            <img
+              class="custom-image-style"
+              img
+              src="../../../assets/img/theme.PNG"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

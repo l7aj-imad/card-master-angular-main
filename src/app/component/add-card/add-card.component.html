@@ -1,0 +1,47 @@
+<div class="container" style="margin-left: 450px">
+  <div class="row">
+    <form class="col-md-6">
+      <div class="form-group">
+        <label>Nom :</label>
+        <input class="form-control" name="Name" [(ngModel)]="card.nom" />
+      </div>
+      <div class="form-group">
+        <label>Travail :</label>
+        <input class="form-control" name="Titre" [(ngModel)]="card.titre" />
+      </div>
+      <div class="form-group">
+        <label>Email :</label>
+        <input
+          type="email"
+          class="form-control"
+          name="Email"
+          [(ngModel)]="card.email"
+        />
+      </div>
+      <div class="form-group">
+        <label>Téléphone :</label>
+        <input class="form-control" name="Telephone" [(ngModel)]="card.tel" />
+      </div>
+      <div class="form-group">
+        <label>Adresse :</label>
+        <input class="form-control" name="Adresse" [(ngModel)]="card.adresse" />
+      </div>
+      <div class="form-group">
+        <label>Linked In :</label>
+        <input
+          class="form-control"
+          name="LinkedIn"
+          [(ngModel)]="card.linkedIn"
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="addCard()"
+        style="margin-left: 210px"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
