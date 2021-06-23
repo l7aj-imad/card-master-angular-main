@@ -12,13 +12,19 @@
 
     <div class="container">
       <div class="row">
-        <div *ngFor="let theme of themes" class="col-md-4">
-          {{ theme.img }}
-          <div class="card card-block" [routerLink]="['/add-card']">
+        <div class="col-md-4">
+          <div class="card card-block" [routerLink]="['../add-card', 2]">
             <img
               class="custom-image-style"
               img
-              src="../../../assets/img/theme.PNG"
+              src="../../../assets/img/theme2.png"
+            />
+          </div>
+          <div class="card card-block" [routerLink]="['../add-card', 1]">
+            <img
+              class="custom-image-style"
+              img
+              src="../../../assets/img/theme1.png"
             />
           </div>
         </div>

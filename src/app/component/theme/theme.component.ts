@@ -16,16 +16,17 @@ export class ThemeComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.getThemes();
   }
 
    getThemes() {
-    this.themeService.getThemes().subscribe(
+    this.themeService.getThemes().pipe().subscribe(
       response => this.handleSuccessfulResponse(response),);
       
   }
   
   handleSuccessfulResponse(response: Array<Theme>) {
-    this.themes = response;
+    this.themes = response  as Theme[];
     console.log("type of themes " + typeof (this.themes));
     
   }

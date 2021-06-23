@@ -1,6 +1,29 @@
-<div class="container" style="margin-left: 450px">
+<div *ngIf="id == 1">
+  <link rel="stylesheet" href="th.css" />
+</div>
+<div *ngIf="id == 2">
+  <link rel="stylesheet" href="thh.css" />
+</div>
+
+<div class="split left">
+  <div class="page" style="height: 300px;width: 533px;">
+    <div class="infoP">
+      <span class="nom" style="font-size: 37px; font-weight: bold;">{{ card.name }}</span>
+      <span class="titre" style="font-size: 27px;">{{ card.title }}</span>
+    </div>
+    <div class="infoS">
+      <span class="email" style="font-size: 22px;">{{ card.email }}</span>
+      <span class="tel" style="font-size: 22px;">{{ card.phone }}</span>
+      <span class="adresse" style="font-size: 22px;">{{ card.adr }}</span>
+      <span class="link" style="font-size: 22px;" >{{ card.linkedin }}</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="split right">
   <div class="row">
-    <form class="col-md-6">
+    <form class="col-md-6 mx-auto">
       <div class="form-group">
         <label>Nom :</label>
         <input class="form-control" name="Name" [(ngModel)]="card.name" />
@@ -20,14 +43,14 @@
       </div>
       <div class="form-group">
         <label>Téléphone :</label>
-        <input class="form-control" name="Phone" [(ngModel)]="card.phone" />
+        <input class="form-control" name="Telephone" [(ngModel)]="card.phone" />
       </div>
       <div class="form-group">
         <label>Adresse :</label>
-        <input class="form-control" name="Adr" [(ngModel)]="card.adr" />
+        <input class="form-control" name="Adresse" [(ngModel)]="card.adr" />
       </div>
       <div class="form-group">
-        <label>LinkedIn :</label>
+        <label>Linked In :</label>
         <input
           class="form-control"
           name="LinkedIn"
@@ -44,5 +67,4 @@
       </button>
     </form>
   </div>
-  <div></div>
 </div>

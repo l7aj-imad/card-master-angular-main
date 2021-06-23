@@ -6,19 +6,21 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-add-card',
   templateUrl: './add-card.component.html',
-  styleUrls: ['./add-card.component.css']
+  styleUrls: [
+    './add-card.component.css',
+    './th.css',
+    './thh.css'
+  ]
 })
 export class AddCardComponent implements OnInit {
-  
+  id = 0;
   @Input()
   card = new Card();
 
   constructor(private route: ActivatedRoute, private cardService:CardService) { }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.params['id'];
-    this.card.theme_id = id;
-    console.log(id);
+    this.id = this.route.snapshot.params['id'];
   }
 
   public addCard(): void {

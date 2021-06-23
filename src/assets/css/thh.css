@@ -1,0 +1,37 @@
+.page {
+  width: 270px;
+  height: 130px;
+  margin: auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  border: thick 5px gray;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px gray;
+  padding: 20px;
+  background-image: url("../img/thh.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+html {
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  font-family: "Heebo", sans-serif;
+  /* font-family: "Source Sans Pro", sans-serif; */
+  background-color: #ffffff;
+}
+
+span {
+  display: block;
+  margin: 1px;
+}
+
+.nom {
+  font-size: 22px;
+  margin-left: 70px;
+}
+
+.titre {
+  font-size: 17px;
+  padding-bottom: 20px;
+  margin-left: 115px;
+}
